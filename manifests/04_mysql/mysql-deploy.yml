@@ -15,18 +15,22 @@ spec:
     spec:
       containers:
       - image: percona
+        command:
+        - /bin/bash
+        tty: true
+        stdin: true
         name: mysql
         args:
           - "--ignore-db-dir=lost+found"
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "changeme"
+          value: "changeme12"
         - name: MYSQL_DATABASE
           value: "syseleven"
         - name: MYSQL_USER
           value: "shopware"
         - name: MYSQL_PASSWORD
-          value: "changeme"
+          value: "changeme12"
         ports:
         - containerPort: 3306
           name: mysql
