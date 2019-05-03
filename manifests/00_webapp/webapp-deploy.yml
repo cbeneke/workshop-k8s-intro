@@ -12,6 +12,8 @@ spec:
       app: webapp
   template:
     metadata:
+      annotations:
+        revision: "1"
       labels:
         app: webapp
     spec:

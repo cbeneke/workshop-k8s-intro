@@ -13,12 +13,10 @@ spec:
       labels:
         app: mysql
     spec:
+      securityContext:
+        fsGroup: 999
       containers:
       - image: percona
-        command:
-        - /bin/bash
-        tty: true
-        stdin: true
         name: mysql
         args:
           - "--ignore-db-dir=lost+found"
