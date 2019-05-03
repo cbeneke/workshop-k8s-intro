@@ -1,0 +1,20 @@
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: generic
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+parameters:
+  availability: dbl1
+  type: quobyte
+provisioner: kubernetes.io/cinder
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: sys11-quobyte
+parameters:
+  availability: dbl1
+  type: quobyte
+provisioner: kubernetes.io/cinder
