@@ -16,7 +16,7 @@ spec:
       securityContext:
         fsGroup: 999
       containers:
-      - image: percona
+        - image: percona:latest
         name: mysql
         args:
           - "--ignore-db-dir=lost+found"
