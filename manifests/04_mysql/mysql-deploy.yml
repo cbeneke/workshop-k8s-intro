@@ -22,13 +22,13 @@ spec:
           - "--ignore-db-dir=lost+found"
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "changeme12"
+          value: "securePassword"
         - name: MYSQL_DATABASE
-          value: "syseleven"
+          value: "wordpress"
         - name: MYSQL_USER
-          value: "shopware"
+          value: "wordpress"
         - name: MYSQL_PASSWORD
-          value: "changeme12"
+          value: "wordpress"
         ports:
         - containerPort: 3306
           name: mysql
