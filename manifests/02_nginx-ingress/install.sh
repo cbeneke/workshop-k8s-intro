@@ -2,4 +2,4 @@
 
 set -x
 
-helm install stable/nginx-ingress --name nginx-ingress
+helm install stable/nginx-ingress --name nginx-ingress --values values.yaml
