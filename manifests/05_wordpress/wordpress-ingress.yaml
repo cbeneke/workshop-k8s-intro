@@ -1,23 +1,15 @@
----
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: demo.invaliddomain.de
   annotations:
     kubernetes.io/ingress.class: nginx
-    #kubernetes.io/tls-acme: 'true'
 spec:
-  ## We are not utilising DNS for the demo, but this is how you would use
-  ## a TLS certificate
-  #tls:
-  #- hosts:
-  #  - demo.invaliddomain.de
-  #  secretName: tls-secret
   rules:
   - host: demo.invaliddomain.de
     http:
       paths:
       - path: /
         backend:
-          serviceName: webapp
+          serviceName: wordpress
           servicePort: http
