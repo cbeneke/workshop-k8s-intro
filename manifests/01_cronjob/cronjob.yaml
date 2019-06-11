@@ -9,10 +9,10 @@ spec:
       template:
         spec:
           containers:
-          - name: hello
-            image: busybox:latest
-            args:
-            - /bin/sh
-            - -c
-            - date; echo Hello from the Kubernetes Workshop
+            - name: hello
+              image: busybox:latest
+              args:
+                - /bin/sh
+                - -c
+                - date; echo Hello from the Kubernetes Workshop
           restartPolicy: OnFailure
